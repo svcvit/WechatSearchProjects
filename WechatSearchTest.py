@@ -53,7 +53,7 @@ def GetTitleUrl(url, data):
     tags = soup.findAll("h4")
     titleurl = []
     for tag in tags:
-        item = {"title":tag.text, "link":tag.find("a").get("href"), "content":""}
+        item = {"title":tag.text.strip(), "link":tag.find("a").get("href"), "content":""}
         titleurl.append(item)
     return titleurl
 
