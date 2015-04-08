@@ -48,7 +48,7 @@ def ResultSave(save_host, save_port, save_name, save_password, save_database, sa
 
 
 def GetTitleUrl(url, data):
-    content = requests.get(url=url, data=data).content # GET请求发送
+    content = requests.get(url=url, params=data).content # GET请求发送
     soup = BeautifulSoup(content)
     tags = soup.findAll("h4")
     titleurl = []
